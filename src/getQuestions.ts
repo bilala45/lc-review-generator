@@ -4,9 +4,6 @@ import { Client, isFullPage } from "@notionhq/client";
 // Initialize notion client
 const client = new Client({ auth: notionKey });
 
-// array to store questions with Status "Done" (completed questions)
-const questions: string[] = [];
-
 // Query database for rows with Status "Done"
 const database = await (() => {
   try {
@@ -23,3 +20,15 @@ const database = await (() => {
     console.log(error);
   }
 })();
+
+// array to store questions with Status "Done" (completed questions)
+const questions: string[] = [];
+
+// build questions array from database content
+database?.results.forEach((row) => {
+  if (isFullPage(row) && "title" in row.properties.Name) {
+    questions.push(row.properties.Name.title[0].plain_text);
+  }
+});
+
+console.log(questions);
