@@ -1,2 +1,1 @@
-console.log("working!");
-console.log("working again!");
+console.log(">>> Here's your question for the day");

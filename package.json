@@ -17,6 +17,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.5",
     "dotenv": "^16.1.4"
   }
 }
