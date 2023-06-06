@@ -1,1 +1,3 @@
-console.log(">>> Here's your question for the day");
+import randQuestion from "./generateRandQuestion.js";
+
+console.log(`>>> Review question: ${randQuestion}`);

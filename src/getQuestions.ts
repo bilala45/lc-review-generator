@@ -4,6 +4,8 @@ import { Client, isFullPage } from "@notionhq/client";
 // Initialize notion client
 const client = new Client({ auth: notionKey });
 
+console.log(">>> Getting questions from database\n");
+
 // Query database for rows with Status "Done"
 const database = await (() => {
   try {
@@ -31,4 +33,4 @@ database?.results.forEach((row) => {
   }
 });
 
-console.log(questions);
+export default questions;
