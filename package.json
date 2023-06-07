@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "npm run build && node build/app.js",
-    "getQuestions": "npm run build && node build/getQuestions.js"
+    "start": "npm run build && node build/app.js"
   },
   "keywords": [],
   "author": "",
